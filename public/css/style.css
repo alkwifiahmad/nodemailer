@@ -1,0 +1,15 @@
+body{
+background-image: url('../img/1.jpg');
+background-size: cover;
+}
+  
+.section{
+    background-color: rgba(169, 169, 169, 0.705);
+    border-radius: 20px;
+  }
+label{
+  color: white !important;
+}   
+.alert{
+  background: rgba(199, 200, 202, 0.507);
+}

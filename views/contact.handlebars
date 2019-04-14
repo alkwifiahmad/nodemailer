@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>App With Nodemailer</title>
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" rel="stylesheet">    
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body class="bg-info">
+  <div class="m-auto w-75 pt-3">
+    <section class="section mb-5 p-4 container" id="contact">
+      <h3 class="text-center my-5 pt-3 pb-4 dark-grey-text font-weight-bold wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
+        <div class="text-center">
+          <img src="../public/img/3.gif" class="rounded" alt="logo" style="width: 70px;">
+        </div>
+        <strong class="text-light">Send E-mail
+        <br> ..ـــــــــــــــــ..
+        </strong>
+      </h3>
+      {{#if msg}}
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+          <h2><strong> {{msg}}</strong>
+          <img src="../public/img/2.gif" alt="" style="width:40px;" class="float-right"></h2>
+            <button type="button" class="close float-right" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {{/if}}
+     
+      <div class="row">
+           <div class="col-md-8 col-xl-9">
+             <form method="POST" action="/send">
+              <div class="row">
+              <div class="col-md-6">
+                <div class="md-form wow fadeInLeft" data-wow-delay="0.3s">
+                  <div class="md-form">
+                    <input type="text" name="name" id="contact-name" class="form-control">
+                    <label for="contact-name text-light" class="">Your name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="md-form wow fadeInLeft" data-wow-delay="0.5s">
+                  <div class="md-form">
+                    <input type="email" name="email" id="contact-email" class="form-control">
+                    <label for="contact-email" class="">Your email</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-form wow fadeInLeft" data-wow-delay="0.3s">
+                  <div class="md-form">
+                    <input type="text" name="company" id="contact-name" class="form-control">
+                    <label for="contact-name" class="">Company</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="md-form wow fadeInLeft" data-wow-delay="0.5s">
+                  <div class="md-form">
+                    <input type="text" name="phone" id="contact-email" class="form-control">
+                    <label for="contact-email" class="">Your Phone</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form wow fadeInLeft" data-wow-delay="0.7s">
+                  <input type="text" name="subject" id="contact-Subject" class="form-control">
+                  <label for="contact-Subject" class="">Subject</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                 <div class="md-form wow fadeInLeft" data-wow-delay="0.9s">
+                  <textarea type="text" name="message" id="contact-message" class="md-textarea form-control" rows="3"></textarea>
+                  <label for="contact-message">Your message</label>
+                </div>
+              </div>
+            </div>
+            <div class="text-center text-md-left mt-4 wow fadeInLeft" data-wow-delay="1.1s">
+            <button  type="submit" class="btn btn-light btn-rounded waves-effect waves-light ">Send</button>
+          </div>
+           </form>
+           
+        </div>
+        <div class="col-md-4 col-xl-3">
+          <ul class="text-center list-unstyled">
+            <li class="wow fadeInRight" data-wow-delay="0.3s" >
+              <div class="text-center">
+          <img src="../public/img/logooo1.gif" class="rounded" alt="logo" style="width: 50px;">
+        </div>
+              <p class="text-light">Alkwifi Ahmad</p>
+            </li>
+            <li class="wow fadeInRight" data-wow-delay="0.3s" >
+              <i class="fas fa-map-marker-alt fa-2x text-light fadeInRight" data-wow-delay="0.3s"></i>
+              <p class="text-light">Dusseldorf, Germany</p>
+            </li>
+            <li class="wow fadeInRight" data-wow-delay="0.6s">
+              <i class="fas fa-phone fa-2x text-light fadeInRight" data-wow-delay="0.3s"></i>
+              <p class="text-light">+49 1578 6390 106</p>
+            </li>
+            <li class="wow fadeInRight" data-wow-delay="0.9s">
+              <i class="fas fa-envelope fa-2x text-light fadeInRight" data-wow-delay="0.3s" data-wow-delay="0.9s"></i>
+              <p class="text-light">alkwifiahmad1976@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+       </div>
+  </section>
+  
+    
+    
+
+  </div>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+</body>
+
+</html>
