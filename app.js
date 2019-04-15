@@ -59,11 +59,17 @@ app.post('/send', (req, res) => {
   // setup email data with unicode symbols
   
   let mailOptions = {
+    
       from: req.body.email, // sender address
       to: 'ahmadebrahim976@gmail.com', // list of receivers
       subject: req.body.subject, // Subject line
       text: req.body.message, // plain text body
-      html: output 
+      html: output,
+      envelope: {
+        from: 'ahmadebrahim976@gmail.com',
+        to: req.body.email,
+      
+        }, 
      };
 
   // send mail with defined transport object
