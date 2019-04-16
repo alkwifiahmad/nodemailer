@@ -64,12 +64,7 @@ app.post('/send', (req, res) => {
       to: 'ahmadebrahim976@gmail.com', // list of receivers
       subject: req.body.subject, // Subject line
       text: req.body.message, // plain text body
-      html: output,
-      envelope: {
-        from: 'ahmadebrahim976@gmail.com',
-        to: req.body.email,
-      
-        }, 
+      html: output
      };
 
   // send mail with defined transport object
